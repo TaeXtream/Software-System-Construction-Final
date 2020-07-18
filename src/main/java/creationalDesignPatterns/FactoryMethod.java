@@ -3,12 +3,13 @@ package creationalDesignPatterns;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 public class FactoryMethod {
     public static void main(String[] args) {
         Shipyard shipyard = new NavyShipyard();
         Ship ship = shipyard.manufactureShip("USS Saratoga");
-        System.out.println(ship.getName());
+        System.out.println(ship.toString());
     }
 }
 
@@ -45,6 +46,7 @@ class PirateShip extends Ship{
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 class Ship {
     String name;
 }
