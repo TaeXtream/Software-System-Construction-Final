@@ -35,6 +35,7 @@ class Circle implements Shape {
     }
 }
 
+// Facade Class
 class ShapeMaker {
     private final Shape circle;
     private final Shape rectangle;
