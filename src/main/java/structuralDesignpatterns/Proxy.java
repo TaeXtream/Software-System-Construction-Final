@@ -2,7 +2,6 @@ package structuralDesignpatterns;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 public class Proxy {
