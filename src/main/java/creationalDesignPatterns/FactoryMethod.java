@@ -7,23 +7,23 @@ import lombok.ToString;
 
 public class FactoryMethod {
     public static void main(String[] args) {
-        Shipyard shipyard = new NavyShipyard();
-        Ship ship = shipyard.manufactureShip("USS Saratoga");
+        ShipFactory shipFactory = new NavyShipFactory();
+        Ship ship = shipFactory.manufactureShip("USS Saratoga");
         System.out.println(ship.toString());
     }
 }
 
-interface Shipyard {
+interface ShipFactory {
     Ship manufactureShip(String name);
 }
 
-class NavyShipyard implements Shipyard {
+class NavyShipFactory implements ShipFactory {
     public Ship manufactureShip(String name) {
         return new NavyShip(name);
     }
 }
 
-class PirateShipyard implements Shipyard {
+class PirateShipFactory implements ShipFactory {
     public Ship manufactureShip(String name) {
         return new PirateShip(name);
     }
